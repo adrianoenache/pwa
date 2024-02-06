@@ -4,11 +4,11 @@
   o arquivo 'app.js', o parâmetro 'type' tenha o valor 'module'.
 
 */
-import { checkServiceWorkerAndRegister } from './checkServiceWorkerAndRegister.js';
+import { checkServiceWorkerAndRegister } from './checkServiceWorkerAndRegister.js'
 
 const initCode = () => {
 
-    checkServiceWorkerAndRegister();
+  checkServiceWorkerAndRegister()
 
 }
 
@@ -22,6 +22,6 @@ const initCode = () => {
 */
 window.addEventListener('load', () => {
 
-    initCode();
+  initCode()
 
-});
+})
