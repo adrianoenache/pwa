@@ -1,11 +1,8 @@
-self.addEventListener('install', event => {
+import { appName } from './js/pwaConfig.js'
+import { installServiceWorker } from './js/installServiceWorker.js'
+import { activateServiceWorker } from './js/activateServiceWorker.js'
 
-    console.warn('Service worker installed')
+console.warn(`App name ${appName}`)
 
-})
-
-self.addEventListener('activate', event => {
-
-    console.warn('Service worker activated')
-
-})
+installServiceWorker()
+activateServiceWorker()
