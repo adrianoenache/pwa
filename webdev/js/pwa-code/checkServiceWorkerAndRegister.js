@@ -1,5 +1,5 @@
 import { appName } from './pwaConfig.js'
-import { callImage } from './callImage.js'
+import { callImage } from '../others/callImage.js'
 
 export function checkServiceWorkerAndRegister() {
 
