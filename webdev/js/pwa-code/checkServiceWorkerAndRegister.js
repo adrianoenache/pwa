@@ -13,7 +13,25 @@ export function checkServiceWorkerAndRegister() {
       updateViaCache: 'all'
     })
       .then(
-        swRegisyer => console.warn(`Service Worker ${appName} registered!`, swRegisyer)
+        swRegisyer => {
+
+          if (swRegisyer.installing) {
+
+            console.warn('Service Worker status = installing')
+
+          } else if (swRegisyer.waiting) {
+
+            console.warn('Service Worker status = installed')
+
+          } else if (swRegisyer.active) {
+
+            console.warn('Service Worker status = active')
+
+          }
+
+          console.warn(`Service Worker ${appName} registered!`, swRegisyer)
+
+        }
       )
       .catch(
         swRegisyerError => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError)
