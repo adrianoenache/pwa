@@ -9,11 +9,11 @@ export function checkServiceWorkerAndRegister() {
 
     navigator.serviceWorker.register('./serviceworker.js', {
       type: 'module',
-      scope: '/webdev/',
+      scope: './',
       updateViaCache: 'all'
     })
       .then(
-        swRegisyer => {
+        (swRegisyer) => {
 
           if (swRegisyer.installing) {
 
@@ -34,7 +34,7 @@ export function checkServiceWorkerAndRegister() {
         }
       )
       .catch(
-        swRegisyerError => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError)
+        (swRegisyerError) => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError)
       )
 
     callImage('images/dog.webp')

@@ -3,10 +3,9 @@ import { doCache } from './doCache.js'
 
 export function installServiceWorker() {
 
-  self.addEventListener('install', event => {
+  self.addEventListener('install', (event) => {
 
-    console.warn('Install from ES module')
-    console.warn(`Service worker installed for ${appName}`)
+    console.warn(`Service worker installed for ${appName}`, event)
 
     event.waitUntil(
 
