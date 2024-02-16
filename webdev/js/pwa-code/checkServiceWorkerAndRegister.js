@@ -8,10 +8,16 @@ export function checkServiceWorkerAndRegister() {
     console.warn(`Call to register Service Worker ${appName}.`)
 
     navigator.serviceWorker.register('./serviceworker.js', {
-      type: 'module'
+      type: 'module',
+      scope: '/webdev/',
+      updateViaCache: 'all'
     })
-      .then(swRegisyer => console.warn(`Service Worker ${appName} registered!`, swRegisyer))
-      .catch(swRegisyerError => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError))
+      .then(
+        swRegisyer => console.warn(`Service Worker ${appName} registered!`, swRegisyer)
+      )
+      .catch(
+        swRegisyerError => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError)
+      )
 
     callImage('images/dog.webp')
 
