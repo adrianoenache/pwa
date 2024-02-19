@@ -10,6 +10,9 @@ Progressive Web Apps - Training
 - [Web.dev - Service Worker Lifecycle](https://web.dev/articles/service-worker-lifecycle)
 - [Microsoft](https://learn.microsoft.com/pt-br/training/paths/create-pwas-with-pwabuilder/)
 - [Chrome for Developers - Progressive Web App Training](https://www.youtube.com/playlist?list=PLNYkxOF6rcIB2xHBZ7opgc2Mv009X87Hh)
+- [Udemy - Client-Side Data Storage Ultimate Guide](https://www.udemy.com/course/client-side-data-storage-ultimate-guide/)
+- [Udemy - Progressive Web Apps: The Concise PWA Masterclass](https://www.udemy.com/course/progressive-web-apps/)
+- [Udemy - Progressive Web Apps (PWA) - The Complete Guide](https://www.udemy.com/course/progressive-web-app-pwa-the-complete-guide/)
 
 ### Debug
 
