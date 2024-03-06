@@ -1,4 +1,4 @@
-import { appName } from './pwaConfig.js'
+import { appName, serviceWorkerPath, serviceWorkerRegisterConfig } from './pwaConfig.js'
 import { callImage } from '../others/callImage.js'
 
 export function checkServiceWorkerAndRegister() {
@@ -7,11 +7,7 @@ export function checkServiceWorkerAndRegister() {
 
     console.warn(`Call to register Service Worker ${appName}.`)
 
-    navigator.serviceWorker.register('./serviceworker.js', {
-      type: 'module',
-      scope: './',
-      updateViaCache: 'all'
-    })
+    navigator.serviceWorker.register(serviceWorkerPath, serviceWorkerRegisterConfig)
       .then(
         (swRegisyer) => {
 
