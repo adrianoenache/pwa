@@ -1,5 +1,5 @@
-import { appName, serviceWorkerPath, serviceWorkerRegisterConfig } from './pwaConfig.js'
-import { callImage } from '../others/callImage.js'
+import { appName, serviceWorkerPath, serviceWorkerRegisterConfig } from '/webdev/js/pwa-code/pwaConfig.js'
+import { callImage } from '/webdev/js/others/callImage.js'
 
 export function checkServiceWorkerAndRegister() {
 
@@ -30,10 +30,12 @@ export function checkServiceWorkerAndRegister() {
         }
       )
       .catch(
+
         (swRegisyerError) => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError)
+
       )
 
-    callImage('images/dog.webp')
+    callImage('/webdev/images/dog.webp')
 
   } else {
 

@@ -1,4 +1,4 @@
-import { appName, cacheVersion } from './pwaConfig.js'
+import { appName, cacheVersion } from '/webdev/js/pwa-code/pwaConfig.js'
 
 export function activateServiceWorker() {
 

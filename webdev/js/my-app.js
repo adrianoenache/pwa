@@ -4,7 +4,7 @@
   o arquivo 'app.js', o parâmetro 'type' tenha o valor 'module'.
 
 */
-import { checkServiceWorkerAndRegister } from './pwa-code/checkServiceWorkerAndRegister.js'
+import { checkServiceWorkerAndRegister } from '/webdev/js/pwa-code/checkServiceWorkerAndRegister.js'
 
 const initCode = () => {
 

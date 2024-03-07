@@ -1,5 +1,5 @@
-import { appName, cacheVersion } from './pwaConfig.js'
-import { doCache } from './doCache.js'
+import { appName, cacheVersion } from '/webdev/js/pwa-code/pwaConfig.js'
+import { doCache } from '/webdev/js/pwa-code/doCache.js'
 
 export function installServiceWorker() {
 
@@ -9,7 +9,7 @@ export function installServiceWorker() {
 
     event.waitUntil(
 
-      doCache(cacheVersion, 'images/cat.webp')
+      doCache(cacheVersion, '/webdev/images/cat.webp')
 
     )
 
