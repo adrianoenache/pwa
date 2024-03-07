@@ -1,5 +1,6 @@
 import { appName, serviceWorkerPath, serviceWorkerRegisterConfig } from '/webdev/js/pwa-code/pwaConfig.js'
 import { callImage } from '/webdev/js/others/callImage.js'
+import { removeTargetChild } from '/webdev/js/others/removeTargetChild.js'
 
 export function checkServiceWorkerAndRegister() {
 
@@ -27,15 +28,19 @@ export function checkServiceWorkerAndRegister() {
 
           console.warn(`Service Worker ${appName} registered!`, swRegisyer)
 
+          removeTargetChild('img[src="/webdev/images/wrong-dog.webp"]')
+
+          callImage('/webdev/images/dog.webp')
+
         }
       )
       .catch(
 
-        (swRegisyerError) => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError)
+        (swRegisyerError) => console.error(`Service Worker ${appName} error on register!!!`, swRegisyerError),
+
+        callImage('/webdev/images/wrong-dog.webp')
 
       )
-
-    callImage('/webdev/images/dog.webp')
 
   } else {
 
