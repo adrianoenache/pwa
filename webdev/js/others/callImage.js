@@ -1,11 +1,16 @@
-export function callImage(path) {
+export function callImage(path, alt, title, width, height, loading) {
 
   if(!path) return
 
-  setTimeout(() => {
-    const img = new Image()
-    img.src = path
-    document.body.appendChild(img)
-  }, 3000)
+  const img = new Image()
+
+  img.alt = alt || 'Fill alt image'
+  img.height = height || '400'
+  img.loading = loading || 'lazy'
+  img.src = path
+  img.title = title || 'Fill title image'
+  img.width = width || '400'
+
+  document.body.appendChild(img)
 
 }
