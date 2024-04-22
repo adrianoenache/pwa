@@ -7,6 +7,8 @@ export function installServiceWorker() {
 
     console.warn(`Service worker installed for ${appName}`, event)
 
+    self.skipWaiting()
+
     event.waitUntil(
 
       doCache(cacheVersion, '/webdev/images/cat.webp')
