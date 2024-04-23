@@ -8,7 +8,7 @@ export function fetchServiceWorker() {
 
     if (url.origin == location.origin && url.pathname == '/webdev/images/dog.webp') {
 
-      event.respondWith(caches.match('/webdev/images/cat.webp'))
+      event.respondWith(caches.match('/webdev/images/big-cat.webp'))
 
     }
 

@@ -11,7 +11,7 @@ export function installServiceWorker() {
 
     event.waitUntil(
 
-      doCache(cacheVersion, '/webdev/images/cat.webp')
+      doCache(cacheVersion, '/webdev/images/big-cat.webp')
 
     )
 
