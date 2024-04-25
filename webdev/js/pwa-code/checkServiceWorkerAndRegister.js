@@ -1,4 +1,5 @@
-import { appName, serviceWorkerPath, serviceWorkerRegisterConfig } from '/webdev/js/pwa-code/pwaConfig.js'
+import { appName, serviceWorkerPath, serviceWorkerRegisterConfig, callTheUpdateOnTheInterval } from '/webdev/js/pwa-code/pwaConfig.js'
+import { invokeAppUpdates } from '/webdev/js/pwa-code/invokeAppUpdates.js'
 import { callImage } from '/webdev/js/others/callImage.js'
 import { removeTargetChild } from '/webdev/js/others/removeTargetChild.js'
 
@@ -25,6 +26,8 @@ export function checkServiceWorkerAndRegister() {
             console.warn('Service Worker status = active')
 
           }
+
+          invokeAppUpdates(swRegisyer, callTheUpdateOnTheInterval)
 
           console.warn(`Service Worker ${appName} registered!`, swRegisyer)
 

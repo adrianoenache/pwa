@@ -6,3 +6,4 @@ export const serviceWorkerRegisterConfig = {
   scope: '/webdev/',
   updateViaCache: 'all'
 }
+export const callTheUpdateOnTheInterval = 2000
