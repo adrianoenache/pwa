@@ -7,11 +7,9 @@ export function activateServiceWorker() {
 
   self.addEventListener('activate', (event) => {
 
-    cleanCache(currentCache).then(() => {
+    console.warn(`### ACTIVATED ### for app ${appName}, ${cacheVersion} is now ready to handle fetches!`, event)
 
-      console.warn(`Service Worker activated for app ${appName}, ${cacheVersion} is now ready to handle fetches!`, event)
-
-    })
+    cleanCache(currentCache)
 
   })
 

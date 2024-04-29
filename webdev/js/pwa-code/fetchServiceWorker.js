@@ -2,7 +2,7 @@ export function fetchServiceWorker() {
 
   self.addEventListener('fetch', (event) => {
 
-    console.warn(`Service Worker fetch`, event)
+    console.warn('### FETCH ### intercepted a http request', event.request.url, 'from clientId', event.clientId)
 
     const url = new URL(event.request.url)
 

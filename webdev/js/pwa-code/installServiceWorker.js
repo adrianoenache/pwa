@@ -5,7 +5,7 @@ export function installServiceWorker() {
 
   self.addEventListener('install', (event) => {
 
-    console.warn(`Service worker installed for ${appName}`, event)
+    console.warn(`### INSTALLED ### cache version = ${cacheVersion}`, event)
 
     self.skipWaiting()
 
